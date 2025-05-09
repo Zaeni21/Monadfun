@@ -79,7 +79,7 @@
 
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
-  const monadChain = {
+  const MonadChain = {
     chainId: '0x279F',
     chainName: 'Monad Testnet',
     rpcUrls: ['https://testnet-rpc.monad.xyz'],
@@ -92,7 +92,7 @@
 
   async function switchToMonad() {
     try {
-      await window.ethereum.request({ method: 'wallet_addEthereumChain', params: [nexusChain] });
+      await window.ethereum.request({ method: 'wallet_addEthereumChain', params: [MonadChain] });
     } catch (error) {
       console.error(error);
     }
